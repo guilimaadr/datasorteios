@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style/styles-GUILHERME.css" />
+    <style>
+      body {
+        background-image: url("img/whit-red.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .menu-lateral ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu-lateral li {
+        display: inline;
+        margin-left: 20px;
+      }
+
+      .menu-lateral a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .content-login {
+        text-align: center;
+        padding: 20px;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 20px auto;
+        max-width: 400px;
+        border-radius: 10px;
+      }
+
+      .form_grupo {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      .form_grupo label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .campo {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .esqueceu-senha {
+        display: block;
+        margin-top: 10px;
+        text-align: right;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+      }
+
+      .form_new_input {
+        margin-right: 10px;
+      }
+
+      .check_label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+
+      .submit {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .submit_btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .submit_btn:hover {
+        background-color: #0056b3;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(255, 0, 0, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="img/ddatametrica.jpg"
+        alt="Logotipo da Datamétrica"
+        title="Logotipo da Datamétrica"
+        width="150"
+      />
+      <nav class="menu-lateral">
+        <ul>
+          <li>
+            <a href="index.html" class="nav-link" data-hover="index"
+              >INFORMAÇÃO</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="content-login">
+          <h2>Login</h2>
+          <form class="box-login" action="products.html" method="get">
+            <div class="form_grupo">
+              <label for="cpf">CPF</label>
+              <input
+                type="text"
+                name="cpf"
+                class="campo"
+                id="cpf"
+                placeholder="000.000.000-00"
+                maxlength="14"
+                required
+              />
+            </div>
+            <div class="form_grupo">
+              <label for="senha">Senha</label>
+              <input
+                type="password"
+                name="senha"
+                class="campo"
+                id="senha"
+                placeholder="Senha"
+                required
+              />
+            </div>
+            <div class="form_grupo">
+              <a href="forgot-password.html" class="esqueceu-senha">
+                Esqueceu sua senha?
+              </a>
+            </div>
+            <div class="form_grupo">
+              <input
+                type="checkbox"
+                name="lembrar-senha"
+                id="lembrar-senha"
+                class="form_new_input"
+              />
+              <label for="lembrar-senha" class="check_label">
+                Lembrar Senha
+              </label>
+            </div>
+            <div class="submit">
+              <button type="submit" name="Submit" class="submit_btn">
+                Entrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2024, Datamétrica. Todos os direitos reservados. CNPJ
+        10.575.983/0001-48
+      </p>
+    </footer>
+    <script>
+      function mascaraCPF(input) {
+        let cpf = input.value;
+        cpf = cpf.replace(/\D/g, "");
+        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        input.value = cpf;
+      }
+
+      document.getElementById("cpf").addEventListener("input", function () {
+        mascaraCPF(this);
+      });
+    </script>
+  </body>
+</html>

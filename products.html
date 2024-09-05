@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos em Destaque</title>
+  <link rel="stylesheet" href="style/styles-GUILHERME.css" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("img/whit-red.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    header img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .menu-lateral ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu-lateral li {
+      margin-left: 20px;
+    }
+
+    .menu-lateral a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .product {
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      margin: 15px 0 10px;
+      font-size: 22px;
+    }
+
+    .product p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .buy-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(255, 0, 0, 0.8);
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .menu-lateral ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-lateral li {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+
+      main {
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img
+      src="img/ddatametrica.jpg"
+      alt="Logotipo da Datamétrica"
+      title="Logotipo da Datamétrica"
+    />
+    <nav class="menu-lateral">
+      <ul>
+        <li><a href="index.html" class="nav-link" data-hover="Sair">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Concorra aos Prêmios</h2>
+
+      <div class="product">
+        <img src="assets/15PRO.jpeg" alt="iPhone 15 Pro Max" />
+        <h3>iPhone 15 Pro Max</h3>
+        <h2>Cota Por Apenas: R$5,00</h2>
+        <p>
+          iPhone 15 Pro Max Apple (512GB) Titânio Azul, Tela de 6,7", 5G e
+          Câmera de 48MP
+        </p>
+        <a
+          href="pay.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="buy-button"
+        >
+          Comprar
+        </a>
+      </div>
+
+      <div class="product">
+        <img src="assets/nitro5.jpg" alt="Notebook Gamer Nitro 5" />
+        <h3>Notebook Gamer Nitro 5</h3>
+        <h2>Cota Por Apenas: R$5,00</h2>
+        <p>
+          Processador Intel® Core™ i7 da 12ª geração e placa de vídeo NVIDIA®
+          GeForce RTX™ série 30. Armazenamento com dois slots para M.2 PCIe
+          4.0 e até 32 GB de RAM DDR4-3200.
+        </p>
+        <a
+          href="pay.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="buy-button"
+        >
+          Comprar
+        </a>
+      </div>
+
+      <!-- Adicione mais produtos conforme necessário seguindo o mesmo padrão -->
+    </section>
+  </main>
+  <footer>
+    <p>
+      &copy; 2024, Datamétrica. Todos os direitos reservados. CNPJ
+      10.575.983/0001-48
+    </p>
+  </footer>
+</body>
+</html>

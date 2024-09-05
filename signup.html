@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style/styles-GUILHERME.css" />
+    <style>
+      body {
+        background-image: url("img/whit-red.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .menu-lateral ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu-lateral li {
+        display: inline;
+        margin-left: 20px;
+      }
+
+      .menu-lateral a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+
+      main {
+        padding: 20px;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 20px auto;
+        max-width: 500px;
+        border-radius: 10px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .form_grupo {
+        margin-bottom: 15px;
+      }
+
+      .form_grupo label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .form_grupo input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .submit {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .submit button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .submit button:hover {
+        background-color: #0056b3;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(255, 0, 0, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="img/ddatametrica.jpg"
+        alt="Logotipo da Datamétrica"
+        title="Logotipo da Datamétrica"
+        width="150"
+      />
+      <nav class="menu-lateral">
+        <ul>
+          <li><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="wrapper fadeInDown">
+          <div class="content-login">
+            <h2>Cadastro</h2>
+            <form class="box-login" action="#" method="post">
+              <div class="form_grupo">
+                <label for="nome">Nome Completo</label>
+                <input
+                  type="text"
+                  name="nome"
+                  class="campo"
+                  id="nome"
+                  placeholder="Seu Nome"
+                  required
+                />
+              </div>
+              <div class="form_grupo">
+                <label for="cpf">CPF</label>
+                <input
+                  type="text"
+                  name="cpf"
+                  class="campo"
+                  id="cpf"
+                  placeholder="CPF - 000.000.000-00"
+                  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                  required
+                />
+              </div>
+              <div class="form_grupo">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="campo"
+                  id="email"
+                  placeholder="seuemail@email.com"
+                  required
+                />
+              </div>
+              <div class="form_grupo">
+                <label for="senha">Senha</label>
+                <input
+                  type="password"
+                  name="senha"
+                  class="campo"
+                  id="senha"
+                  placeholder="Senha"
+                  required
+                />
+              </div>
+              <div class="form_grupo">
+                <label for="confirmar-senha">Confirmar Senha</label>
+                <input
+                  type="password"
+                  name="confirmar-senha"
+                  class="campo"
+                  id="confirmar-senha"
+                  placeholder="Confirmar Senha"
+                  required
+                />
+              </div>
+              <div class="submit">
+                <button type="submit" name="Submit" class="submit_btn">
+                  Cadastrar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2024, Datamétrica. Todos os direitos reservados. CNPJ
+        10.575.983/0001-48
+      </p>
+    </footer>
+  </body>
+</html>
